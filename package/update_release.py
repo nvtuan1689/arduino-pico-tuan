@@ -13,7 +13,7 @@ args = parser.parse_args()
 if len(args.files) == 0:
     print("ERROR:  No files specified")
     quit()
-
+print("args.tag=", args.tag)
 gh = Github(login_or_token=args.token)
 repo = gh.get_repo(str(args.repo))
 for fn in args.files:
